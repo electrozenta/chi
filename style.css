@@ -1,0 +1,84 @@
+/*Web Fonts*/
+
+@font-face {
+    font-family: 'FMBF Hanragitaran Italic';
+    src: url('./font/FMBF_Hanragitaran-Italic.woff');
+}
+
+@font-face {
+    font-family: 'ArialAMU';
+    src: url('./font/ArialAMU.woff');
+    font-weight: normal;
+}
+
+/*End Web Fonts*/
+/********************************************/
+/*Common Classes*/
+.no-gutter-left {
+    padding-left: 0;
+}
+
+.no-gutter-right {
+    padding-right: 0;
+}
+
+.no-gutter {
+    padding-left: 0;
+    padding-right: 0;
+}
+/*End Common Classes*/
+
+
+.chi-header {
+    background-image: url('img/background-stone.png');
+    margin: 30px 0;
+
+}
+
+.chi-header-logo {
+    background: url('img/logo-header.png') no-repeat;
+    width: 61px;
+    height: 45px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.chi-header h3{
+    font-family: 'FMBF Hanragitaran Italic';
+    font-size: 29px;
+    color: #ffffff;
+    background-color: #7c4ea9;
+    margin: 0;
+    padding: 5px 20px;
+    height: 45px;
+    display: inline-block;
+}
+
+.chi-article-img {
+    min-width: 100%;
+
+}
+
+.chi-article-title {
+    font-family: 'ArialAMU';
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    min-height: 72px;
+}
+
+.chi-article-info {
+    border: 0 solid;
+    border-top-width: 1px;
+    border-bottom-width: 4px;
+    padding: 8px 0;
+    font-family: ArianAMU;
+    font-size: 18px;
+}
+
+.chi-article-link {
+    background-image: url('img/link-arrow.png');
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 16px;
+}
