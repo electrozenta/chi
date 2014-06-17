@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Armchurch.info</title>
 
+    <!-- owl css-->
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
@@ -15,176 +18,367 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!--<script src="js/jquery-1.9.1.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <style>
+        #owl-demo .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+
+                responsive: true,
+                pagination: false,
+                navigation: false,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true
+
+            });
+        });
+
+
+        function next() {
+            var owl = $(".owl-carousel").data('owlCarousel');
+            owl.next();
+        }
+        function prev() {
+            var owl = $(".owl-carousel").data('owlCarousel');
+            owl.prev();
+        }
+
+
+    </script>
 </head>
 <body>
+<!--Container-->
 <div class="container">
-    <header class="well">
-        <h1>HEADER</h1>
-        <h2>Navigation...</h2>
+
+
+<header class="well" style="height: 649px;">
+
+    <div>
+        <div class="left_control">
+            <div class="owl-controls clickable" >
+                <div class="owl-buttons">
+                    <p onclick="prev()"> PREV</p>
+
+                </div>
+            </div>
+        </div>
+        <div class=" slider">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item"><img src="photo//img-1.png">
+                    <p>askjdhsakdjhaskjdh</p>
+                    <div style="float:right; border: 1px solid black; width: 20px; height:20px"></div>
+                </div>
+                <div class="item"><img src="photo//img-2.png"></div>
+                <div class="item"><img src="photo//img-3.png"></div>
+            </div>
+        </div>
+        <div class="right_control">
+            <div class="owl-controls clickable" >
+                <div class="owl-buttons">
+                    <p onclick="next()"> NEXT</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</header>
+
+
+<!--Basic Row-->
+<div class="row">
+
+
+<!--Left Panel-->
+<div class="col-md-8">
+
+
+<div class="row">
+    <header class="chi-header chi-header-left">
+        <h3 class="chi-header-title">Նվիրապետական աթոռներ</h3><span class="chi-header-logo"></span>
     </header>
+    <div class="col-sm-6 no-gutter-left">
+        <img class="img-responsive chi-article-img" src="photo/img-1.png" alt=""/>
+        <h4 class="chi-article-title">Ամենայն Հայոց Կաթողիկոսն ընդունեց Սերբիայի արտաքին գործերի
+            նախարարին</h4>
 
-    <div class="row">
-        <!--Left Panel-->
-        <div class="col-md-8">
+        <div class="chi-article-info">
+            <time>11 Մարտի, 2014</time>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+        <div>
+            <span class="pull-right chi-article-button"> <img src="photo//img-14.png" alt="Facebook"></span>
+        </div>
+    </div>
+    <div class="col-sm-6 no-gutter-right">
+        <img class="img-responsive chi-article-img" src="photo/img-2.png" alt=""/>
+        <h4 class="chi-article-title">Ի Տեր հանգչեց Տ. Շնորհք ծայրագույն վարդապետ Գասպարյանը</h4>
+
+        <div class="chi-article-info">
+            <time>10 Մարտի, 2014</time>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+        <div>
+            <span class="pull-right chi-article-button"><img src="photo//img-14.png" alt="Facebook"></span>
+        </div>
+    </div>
+</div>
 
 
-            <div class="row">
-                <header class="chi-header">
-                    <h3>Նվիրապետական աթոռներ</h3><span class="chi-header-logo"></span>
-                </header>
-                <div class="col-sm-6 no-gutter-left">
-                    <img class="img-responsive chi-article-img" src="photo/img-1.png" alt=""/>
-                    <h4 class="chi-article-title">Ամենայն Հայոց Կաթողիկոսն ընդունեց Սերբիայի արտաքին գործերի
-                        նախարարին</h4>
+<div class="row">
+    <header class="chi-header chi-header-left">
+        <h3 class="chi-header-title">Թեմական կյանք</h3><span class="chi-header-logo"></span>
+    </header>
+</div>
 
-                    <div class="chi-article-info">
-                        <time>11 Մարտի, 2014</time>
-                        <span class="pull-right chi-article-link"></span>
-                    </div>
-                    <div>
-                        <span class="pull-right chi-article-button"> <img src="photo//img-14.png" alt="Facebook"></span>
-                    </div>
-                </div>
-                <div class="col-sm-6 no-gutter-right">
-                    <img class="img-responsive chi-article-img" src="photo/img-2.png" alt=""/>
-                    <h4 class="chi-article-title">Ի Տեր հանգչեց Տ. Շնորհք ծայրագույն վարդապետ Գասպարյանը</h4>
+<div class="row">
+    <div class="col-sm-6 no-gutter-left">
+        <img class="img-responsive chi-article-img" src="photo/img-3.png" alt=""/>
+        <h4 class="chi-article-title">Շքանշանների հանձնման արարողություն Մոսկվայի առաջնորդանիստ Ս.Պայծառակերպություն
+            եկեղեցում</h4>
 
-                    <div class="chi-article-info">
-                        <time>10 Մարտի, 2014</time>
-                        <span class="pull-right chi-article-link"></span>
-                    </div>
-                    <div>
-                        <span class="pull-right chi-article-button"><img src="photo//img-14.png" alt="Facebook"></span>
-                    </div>
-                </div>
+        <div class="chi-article-info">
+            <time>18 Նոյեմբերի, 2013</time>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+        <div>
+            <span class="pull-right chi-article-button"><img src="photo//img-14.png" alt="Facebook"></span>
+        </div>
+    </div>
+    <div class="col-sm-6 no-gutter-right">
+        <img class="img-responsive chi-article-img" src="photo/img-4.png" alt=""/>
+        <h4 class="chi-article-title">Դամասկոսի Ազգային Ս. Թարգմանչաց ճեմարանում զոհվածների համար հոգեհանգիստ Մայր Աթոռ
+            Ս. Էջմիածնում</h4>
+
+        <div class="chi-article-info">
+            <time>12 Նոյեմբերի, 2013</time>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+        <div>
+            <span class="pull-right chi-article-button"><img src="photo//img-14.png" alt="Facebook"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <header class="chi-header chi-header-left ">
+        <h3 class="chi-header-title">Հարցազրույցներ</h3><span class="chi-header-logo"></span>
+    </header>
+</div>
+
+<div class="row">
+    <div class="col-sm-3 no-gutter-left">
+        <img class="img-responsive" src="photo/img-5.png" alt=""/>
+    </div>
+
+    <div class="col-sm-9 no-gutter-right">
+        <h4 class="chi-article-title">Մեզ հայեցի և քրիստոնեավայել անուններ են պետք 28 Մարտ, 2013</h4>
+
+        <p>Նորածին երեխաներին նախկինում անուն էին տալիս ոչ թե անմիջապես ծնվելու պահին, այլ՝ մկրտելու
+            արարողության ժամանակ, մինչդեռ խորհրդային տարիներից մինչ այսօր երեխային ծննդատնից դուրս գրելու
+            համար որպես կարևոր նախապայման է հանդիսանում ծննդյան վկայականը, որի մեջ նշված է նաև անունը:
+        </p>
+        <span class="pull-right chi-article-link"></span>
+
+    </div>
+
+</div>
+<hr/>
+
+
+<div class="row">
+    <div class="col-sm-4 no-gutter-left">
+        <img class="img-responsive" src="photo/img-6.png" alt=""/>
+    </div>
+
+    <div class="col-sm-8 no-gutter-right">
+        <h4 class="chi-article-title">Հայ Առաքելական Սուրբ եկեղեցին իրականացնում է գործառույթ, որի միջոցով հայորդիները
+            ավելի ճիշտ կերպով կսկսեն վերաբերվել Եկեղեցուն 28 Մարտ, 2013</h4>
+
+        <p>Նորածին երեխաներին նախկինում անուն էին տալիս ոչ թե անմիջապես ծնվելու պահին, այլ՝ մկրտելու
+            արարողության ժամանակ, մինչդեռ խորհրդային տարիներից մինչ այսօր երեխային ծննդատնից դուրս գրելու
+            համար որպես կարևոր նախապայման է հանդիսանում ծննդյան վկայականը, որի մեջ նշված է նաև անունը:
+        </p>
+        <span class="pull-right chi-article-link"></span>
+        <hr/>
+    </div>
+</div>
+
+
+<div class="row">
+    <header class="chi-header chi-header-left ">
+        <h3 class="chi-header-title">Հոդվածներ</h3><span class="chi-header-logo"></span>
+    </header>
+</div>
+
+<div class="row">
+    <div class="col-sm-3 no-gutter-left">
+        <img class="img-responsive" src="photo/img-7.png" alt=""/>
+    </div>
+
+    <div class="col-sm-9 no-gutter-right">
+        <h4 class="chi-article-title">Վաչե և Թամար Մանուկյան» մատենադարան</h4>
+
+        <p>Դարեր շարունակ հայ հոգևորականներն ու մտավորականներն իրենց գիտելիքները հարստացրել են Մայր
+            Աթոռի գրադարանում: Մայր Աթոռի տարածքում գրադարան եղել է Կիրակոս կաթողիկոս Վիրապեցու
+            ժամանակներից սկսած (1441 թվականից, երբ կաթողիկոսական աթոռը Սսից տեղափոխվել է Էջմիածին),
+            սակայն հնարավոր է, որ դեռևս 5-րդ դարից են այս տարածքում մատյաններ եղել: </p>
+        <span class="pull-right chi-article-link"></span>
+
+    </div>
+
+</div>
+<hr/>
+
+
+<div class="row">
+    <div class="col-sm-3 no-gutter-left">
+        <img class="img-responsive chi-article-img" src="photo/img-8.png" alt=""/>
+    </div>
+
+    <div class="col-sm-9 no-gutter-right">
+        <h4 class="chi-article-title">Էօռնեկյան» հանրակրթական դպրոց</h4>
+
+        <p>Իր գոյության վաղ ժամանակներից Հայ Առաքելական Եկեղեցին հատուկ նշանակություն է տվել կրթությանը՝
+            կարևոր դեր խաղալով ոչ միայն ազգի բարոյական և հոգևոր արժեքների, այլև գիտության, արվեստի,
+            ազգային ինքնագիտակցության ձևավորման և զարգացման գործում: Այսօր Մայր Աթոռ Սուրբ Էջմիածինը
+            խորհրդի մեծ գիտակցումով է շարունակում դարերի ավանդույթը։
+        </p>
+        <span class="pull-right chi-article-link"></span>
+
+        <hr/>
+        <div class="row">
+            <div>
+                <img class="img-responsive chi-article-img" src="photo/img-17.png" alt=""/>
+                <p> </p>
             </div>
 
-
-
-            <div class="row">
-                <header class="chi-header">
-                    <h3>Թեմական կյանք</h3><span class="chi-header-logo"></span>
-                </header>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 no-gutter-left">
-                    <img class="img-responsive chi-article-img" src="photo/img-3.png" alt=""/>
-                    <h4 class="chi-article-title">Շքանշանների հանձնման արարողություն Մոսկվայի առաջնորդանիստ Ս. Պայծառակերպություն եկեղեցում</h4>
-                    <div class="chi-article-info">
-                        <time>18 Նոյեմբերի, 2013</time>
-                        <span class="pull-right chi-article-link"></span>
-                    </div>
-                    <div>
-                        <span class="pull-right"></span>
-                    </div>
-                </div>
-                <div class="col-sm-6 no-gutter-right">
-                    <img class="img-responsive chi-article-img" src="photo/img-4.png" alt=""/>
-                    <h4 class="chi-article-title">Դամասկոսի Ազգային Ս. Թարգմանչաց ճեմարանում զոհվածների համար հոգեհանգիստ Մայր Աթոռ Ս. Էջմիածնում</h4>
-                    <div class="chi-article-info">
-                        <time>18 Նոյեմբերի, 2013</time>
-                        <span class="pull-right chi-article-link"></span>
-                    </div>
-                    <div>
-                        <span class="pull-right"><img src="photo//img-14.png" alt="Facebook"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <header class="chi-header ">
-                    <h3>Հարցազրույցներ</h3><span class="chi-header-logo"></span>
-                </header>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-3 no-gutter-left">
-                    <img class="img-responsive" src="photo/img-5.png" alt=""/>
-                </div>
-
-                <div class="col-sm-9 no-gutter-right">
-                    <h4 class="chi-article-title">Մեզ հայեցի և քրիստոնեավայել անուններ են պետք 28 Մարտ, 2013</h4>
-                    <p>Նորածին երեխաներին նախկինում անուն էին տալիս ոչ թե անմիջապես ծնվելու պահին, այլ՝ մկրտելու
-                        արարողության ժամանակ, մինչդեռ խորհրդային տարիներից մինչ այսօր երեխային ծննդատնից դուրս գրելու
-                        համար որպես կարևոր նախապայման է հանդիսանում ծննդյան վկայականը, որի մեջ նշված է նաև անունը: </p>
-                    <span class="pull-right chi-article-link"></span>
-
-                </div>
-
-            </div>
-            <hr/>
-
-
-
-            <div class="row">
-                <div class="col-sm-4 no-gutter-left">
-                    <img class="img-responsive" src="photo/img-6.png" alt=""/>
-                </div>
-
-                <div class="col-sm-8 no-gutter-right">
-                    <h4 class="chi-article-title">Հայ Առաքելական Սուրբ եկեղեցին իրականացնում է գործառույթ, որի միջոցով
-                        հայորդիները
-                        ավելի
-                        ճիշտ կերպով կսկսեն վերաբերվել Եկեղեցուն
-                        28 Մարտ, 2013</h4>
-
-                    <p>Նորածին երեխաներին նախկինում անուն էին տալիս ոչ թե անմիջապես ծնվելու պահին, այլ՝ մկրտելու
-                        արարողության ժամանակ, մինչդեռ խորհրդային տարիներից մինչ այսօր երեխային ծննդատնից դուրս գրելու
-                        համար որպես կարևոր նախապայման է հանդիսանում ծննդյան վկայականը, որի մեջ նշված է նաև անունը: </p>
-                    <span class="pull-right chi-article-link"></span>
-                </div>
-            </div>
-            <div class="row">
-
-                <header class="chi-header ">
-                    <h3>Հոդվածներ</h3><span class="chi-header-logo"></span>
-                </header>
-
-                <div class="row">
-                    <div class="col-sm-3 no-gutter-left">
-                        <img class="img-responsive" src="photo/img-7.png" alt=""/>
-                    </div>
-
-                    <div class="col-sm-9 no-gutter-right">
-                        <h4 class="chi-article-title">Վաչե և Թամար Մանուկյան» մատենադարան</h4>
-                        <p>Դարեր շարունակ հայ հոգևորականներն ու մտավորականներն իրենց գիտելիքները հարստացրել են Մայր Աթոռի գրադարանում: Մայր Աթոռի տարածքում գրադարան եղել է Կիրակոս կաթողիկոս Վիրապեցու ժամանակներից սկսած (1441 թվականից, երբ կաթողիկոսական աթոռը Սսից տեղափոխվել է Էջմիածին), սակայն հնարավոր է, որ դեռևս 5-րդ դարից են այս տարածքում մատյաններ եղել: </p>
-                        <span class="pull-right chi-article-link"></span>
-
-                    </div>
-
-                </div>
-                <hr/>
-
-
-
-                <div class="row">
-                    <div class="col-sm-4 no-gutter-left">
-                        <img class="img-responsive" src="photo/img-8.png" alt=""/>
-                    </div>
-
-                    <div class="col-sm-8 no-gutter-right">
-                        <h4 class="chi-article-title">Էօռնեկյան» հանրակրթական դպրոց</h4>
-                     <p>Իր գոյության վաղ ժամանակներից Հայ Առաքելական Եկեղեցին հատուկ նշանակություն է տվել կրթությանը՝ կարևոր դեր խաղալով ոչ միայն ազգի բարոյական և հոգևոր արժեքների, այլև գիտության, արվեստի, ազգային ինքնագիտակցության ձևավորման և զարգացման գործում: Այսօր Մայր Աթոռ Սուրբ Էջմիածինը խորհրդի մեծ գիտակցումով է շարունակում դարերի ավանդույթը։  </p>
-                        <span class="pull-right chi-article-link"></span>
-                    </div>
 
         </div>
+        <div></div>
+
 
         <!--End Left Panel-->
 
+
         <!--Right Panel-->
-        <div class="col-md-4"></div>
+
     </div>
 
 </div>
 
+<div class="row">
+    <header class="chi-header chi-header-left">
+        <h3 class="chi-header-title">Մամուլի տեսություն</h3><span class="chi-header-logo"></span>
+    </header>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 no-gutter-left">
+        <img class="img-responsive chi-article-img" src="photo/img-13.png" alt=""/>
+        <h4 class="chi-article-title">Կիպրոսի հյուսիսում հայկական եկեղեցի է վերաբացվել </h4>
+
+        <div class="chi-article-info">
+            <time>20 մարտի 2014</time>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+
+    </div>
+    <div class="col-sm-6 no-gutter-right">
+        <img class="img-responsive chi-article-img" src="photo/img-11.png" alt=""/>
+        <h4 class="chi-article-title">Տեր Վահրամ քահանա. Ուլֆ Էկմանի վերադարձը Կաթոլիկ եկեղեցի դարձի անուղղակ հրավեր
+            է</h4>
+
+        <div class="chi-article-info">
+            <time>19 Մարտի, 2013</time>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+
+    <header class="chi-header chi-header-left ">
+        <h3 class="chi-header-title">Հատուկ նախագծեր</h3><span class="chi-header-logo"></span>
+    </header>
+    <div class="row">
+        <div class="col-sm-4 no-gutter-left">
+            <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
+            <h4 class="chi-article-title">Հայ եկեղեցու քարտեզ</h4>
+
+            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
+            </P>
+            <span class="pull-right chi-article-link"> </span>
+        </div>
+        <div class="col-sm-4 no-gutter-left">
+            <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
+            <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
+
+            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
+            </P>
+
+            <div class="chi-article-info"></div>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+        <div class="col-sm-4 no-gutter-left">
+            <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
+            <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
+            <span class="pull-right chi-article-link"></span>
+            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
+            </P>
+
+        </div>
+    </div>
+
+</div>
+<!--End Left Panel-->
+
+
+<!--Right Panel-->
+  <div class="col-md-4">
+
+    <header class="chi-header">
+        <h3 class="chi-header-title chi-widget">Օրացույց</h3>
+    </header>
+
+    <div></div>
+
+    <div class="chi-calendar-header"></div>
+
+
+</div>
+<!--End Right Panel-->
+
+
+</div>
+<!--End Basic Row-->
+
+
+</div>
+<!--End Container-->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
 
 </body>
 </html>

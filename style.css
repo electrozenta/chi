@@ -30,9 +30,11 @@
 
 
 .chi-header {
-    background-image: url('img/background-stone.png');
     margin: 30px 0;
+}
 
+.chi-header-left {
+    background-image: url('img/background-stone.png');
 }
 
 .chi-header-logo {
@@ -43,7 +45,7 @@
     vertical-align: top;
 }
 
-.chi-header h3{
+.chi-header-title {
     font-family: 'FMBF Hanragitaran Italic';
     font-size: 29px;
     color: #ffffff;
@@ -52,6 +54,10 @@
     padding: 5px 20px;
     height: 45px;
     display: inline-block;
+}
+
+.chi-widget {
+    display: block;
 }
 
 .chi-article-img {
@@ -86,4 +92,31 @@
 .chi-article-button {
     padding-top:10px;
 
+}
+
+
+/*Right Panel*/
+
+.chi-calendar-header {
+    background-image: url(photo/img-15.png);
+    height: 83px;
+    background-size: contain;
+}
+
+.left_control{
+    float: left;
+    display: inline-block;
+    border: 1px solid black;
+    width: 30px;
+}
+
+.right_control{
+    float: right;
+    display: inline-block;
+    border: 1px solid black;
+    width: 30px;
+}
+.slider{
+    float:left;
+    width: 840px;
 }
