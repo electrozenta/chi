@@ -116,7 +116,7 @@
     border: 1px solid black;
     width: 30px;
 }
-.slider{
-    float:left;
-    width: 840px;
+
+.chi-slide-item > img {
+    min-width: 100%;
 }

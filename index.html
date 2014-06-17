@@ -22,19 +22,11 @@
     <!--<script src="js/jquery-1.9.1.js"></script>-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    <style>
-        #owl-demo .item img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-    </style>
-
     <script type="text/javascript">
 
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
-
+                autoPlay : 2000,
                 responsive: true,
                 pagination: false,
                 navigation: false,
@@ -45,57 +37,29 @@
             });
         });
 
-
-        function next() {
-            var owl = $(".owl-carousel").data('owlCarousel');
-            owl.next();
-        }
-        function prev() {
-            var owl = $(".owl-carousel").data('owlCarousel');
-            owl.prev();
-        }
-
-
     </script>
 </head>
 <body>
 <!--Container-->
 <div class="container">
 
-
-<header class="well" style="height: 649px;">
-
-    <div>
-        <div class="left_control">
-            <div class="owl-controls clickable" >
-                <div class="owl-buttons">
-                    <p onclick="prev()"> PREV</p>
-
-                </div>
-            </div>
-        </div>
-        <div class=" slider">
-            <div id="owl-demo" class="owl-carousel owl-theme">
-                <div class="item"><img src="photo//img-1.png">
-                    <p>askjdhsakdjhaskjdh</p>
-                    <div style="float:right; border: 1px solid black; width: 20px; height:20px"></div>
-                </div>
-                <div class="item"><img src="photo//img-2.png"></div>
-                <div class="item"><img src="photo//img-3.png"></div>
-            </div>
-        </div>
-        <div class="right_control">
-            <div class="owl-controls clickable" >
-                <div class="owl-buttons">
-                    <p onclick="next()"> NEXT</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
+<header class="well">
+    <h1>Some margin here</h1>
 </header>
+
+<div class="row">
+    <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="chi-slide-item">
+            <img src="photo/img-1.png"/>
+        </div>
+        <div class="chi-slide-item">
+            <img src="photo/img-2.png"/>
+        </div>
+        <div class="chi-slide-item">
+            <img src="photo/img-3.png"/>
+        </div>
+    </div>
+</div>
 
 
 <!--Basic Row-->
@@ -264,6 +228,7 @@
         <div class="row">
             <div>
                 <img class="img-responsive chi-article-img" src="photo/img-17.png" alt=""/>
+
                 <p>............ </p>
             </div>
 
@@ -339,6 +304,7 @@
             <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
             <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
             <span class="pull-right chi-article-link"></span>
+
             <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
             </P>
 
@@ -346,11 +312,12 @@
     </div>
 
 </div>
+</div>
 <!--End Left Panel-->
 
 
 <!--Right Panel-->
-  <div class="col-md-4">
+<div class="col-md-4">
 
     <header class="chi-header">
         <h3 class="chi-header-title chi-widget">Օրացույց</h3>
