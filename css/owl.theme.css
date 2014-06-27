@@ -8,6 +8,8 @@
 	text-align: center;
 }
 
+
+
 /* Styling Next and Prev buttons */
 
 .owl-theme .owl-controls .owl-buttons div{
@@ -77,3 +79,28 @@
 	min-height: 150px;
 	background: url(AjaxLoader.gif) no-repeat center center
 }
+
+
+/*Custom Style*/
+.owl-next {
+    position: absolute;
+    top: 38%;
+    right: -75px;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 38%;
+    left: -75px;
+}
+
+.owl-theme .owl-controls .owl-buttons div{
+
+    margin: 5px;
+    padding: 3px 10px;
+
+    background: transparent;
+    filter: Alpha(Opacity=100);/*IE7 fix*/
+    opacity: 1;
+}
+/*End Custom Style*/

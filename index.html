@@ -24,46 +24,124 @@
 
     <script type="text/javascript">
 
+
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
-                autoPlay : 2000,
+                autoPlay: 2000,
                 responsive: true,
                 pagination: false,
-                navigation: false,
+                navigation: true,
                 slideSpeed: 300,
                 paginationSpeed: 400,
-                singleItem: true
-
+                singleItem: true,
+                navigationText: [
+                    '<span class="carousel-left"></span>',
+                    '<span class="carousel-right"></span>']
             });
         });
 
     </script>
+
+    <script type="text/javascript">
+        function next() {
+            var owl = $(".owl-carousel").data('owlCarousel');
+            owl.next();
+        }
+        function prev() {
+            var owl = $(".owl-carousel").data('owlCarousel');
+            owl.prev();
+        }
+    </script>
+
 </head>
 <body>
+
 <!--Container-->
 <div class="container">
 
-<header class="well">
-    <h1>Some margin here</h1>
-</header>
 
-<div class="row">
-    <div id="owl-demo" class="owl-carousel owl-theme">
-        <div class="chi-slide-item">
-            <img src="photo/img-1.png"/>
+<!--Header-->
+
+<div class="navbar chi-navbar" role="navigation">
+    <div class="container-fluid chi-nav-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="chi-logo" href="#" title="armchurch.info"></a>
         </div>
-        <div class="chi-slide-item">
-            <img src="photo/img-2.png"/>
-        </div>
-        <div class="chi-slide-item">
-            <img src="photo/img-3.png"/>
+        <div class="navbar-collapse collapse">
+            <div class="row chi-nav-search">
+                <input type="text" placeholder="Փնտրել" class="chi-search"/>
+
+                <div>
+                    <a class="chi-soc chi-soc-facebook" href="https://www.facebook.com/" target="_blank"
+                       role="button"></a>
+                    <a class="chi-soc chi-soc-twitter" href="https://www.twitter.com/" target="_blank"
+                       role="button"> </a>
+                    <a class="chi-soc chi-soc-google" href="https://www.google.com/" target="_blank" role="button"> </a>
+                    <a class="chi-soc chi-soc-youtube" href="https://www.youtube.com/" target="_blank"
+                       role="button"> </a>
+
+                </div>
+            </div>
+            <ul class="nav nav-justified list-inline chi-nav">
+
+                <li class="active"><a href="#">Լուրեր</a></li>
+                <li><a href="#">Հարցազրույցներ </a></li>
+                <li><a href="#">Հոդվածներ </a></li>
+                <li><a href="#">Միջեկեղեցական լուրեր</a></li>
+                <li><a href="#">Մամուլի տեսություն</a></li>
+                <li><a href="#"> Տեսանյութեր</a></li>
+                <li><a href="#">Ձայնագրություններ</a></li>
+            </ul>
+            <ul class="list-inline chi-nav-links">
+                <li><a href="#">Հատուկ նախագծեր</a></li>
+                <li><a href="#">Մրցույթներ</a></li>
+                <li><a href="#">Օգտակար հղումներ</a></li>
+            </ul>
         </div>
     </div>
 </div>
 
+<!--End Header-->
 
 <!--Basic Row-->
 <div class="row">
+
+
+<div class="chi-carousel-wrapper">
+    <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="chi-slide-item">
+            <img src="photo/Untitled-1.png" class="img-responsive"/>
+            <h4 class=chi-title-carousel> Գերագույն հոգևոր խորհրդի ժողով Մայր Աթոռ Սուրբ Էջմիածնում</h4>
+        </div>
+        <div class="chi-slide-item">
+            <img src="photo/C02.png" class="img-responsive"/>
+            <h4 class=chi-title-carousel> Գերագույն հոգևոր խորհրդի ժողով Մայր Աթոռ Սուրբ Էջմիածնում</h4>
+        </div>
+        <div class="chi-slide-item">
+            <img src="photo/C03.png" class="img-responsive"/>
+            <h4 class=chi-title-carousel> Գերագույն հոգևոր խորհրդի ժողով Մայր Աթոռ Սուրբ Էջմիածնում</h4>
+        </div>
+    </div>
+
+    <div class="chi-carousel-footer">
+        <div class="chi-carousel-footer-item">
+            <img class="img-responsive" src="photo/small-img.png" alt=""/>
+            <h6>Ամենայն Հայոց Կաթողիկոսը ցավակցական գիր է հղել Ասորի Ուղղափառ Եկեղեցու Պատրիարքի մահվան առիթով</h6>
+            <span class="pull-right chi-article-link"> </span>
+        </div>
+        <div class="chi-carousel-footer-item">
+            <img class="img-responsive" src="photo/small-img.png" alt=""/>
+            <h6>Հուլիսին կգումարվի Հայ Եկեղեցու Երիտասարդաց միավորման ներկայացուցչական ժողով</h6>
+            <span class="pull-right chi-article-link"></span>
+        </div>
+    </div>
+</div>
 
 
 <!--Left Panel-->
@@ -76,8 +154,7 @@
     </header>
     <div class="col-sm-6 no-gutter-left">
         <img class="img-responsive chi-article-img" src="photo/img-1.png" alt=""/>
-        <h4 class="chi-article-title">Ամենայն Հայոց Կաթողիկոսն ընդունեց Սերբիայի արտաքին գործերի
-            նախարարին</h4>
+        <h4 class="chi-article-title">Ամենայն Հայոց Կաթողիկոսն ընդունեց Սերբիայի արտաքին գործերի նախարարին</h4>
 
         <div class="chi-article-info">
             <time>11 Մարտի, 2014</time>
@@ -128,7 +205,7 @@
             Ս. Էջմիածնում</h4>
 
         <div class="chi-article-info">
-            <time>12 Նոյեմբերի, 2013</time>
+            <time class="chi-article-time">12 Նոյեմբերի, 2013</time>
             <span class="pull-right chi-article-link"></span>
         </div>
         <div>
@@ -150,7 +227,7 @@
     </div>
 
     <div class="col-sm-9 no-gutter-right">
-        <h4 class="chi-article-title">Մեզ հայեցի և քրիստոնեավայել անուններ են պետք 28 Մարտ, 2013</h4>
+        <h4 class="chi-title">Մեզ հայեցի և քրիստոնեավայել անուններ են պետք 28 Մարտ, 2013</h4>
 
         <p>Նորածին երեխաներին նախկինում անուն էին տալիս ոչ թե անմիջապես ծնվելու պահին, այլ՝ մկրտելու
             արարողության ժամանակ, մինչդեռ խորհրդային տարիներից մինչ այսօր երեխային ծննդատնից դուրս գրելու
@@ -170,18 +247,18 @@
     </div>
 
     <div class="col-sm-8 no-gutter-right">
-        <h4 class="chi-article-title">Հայ Առաքելական Սուրբ եկեղեցին իրականացնում է գործառույթ, որի միջոցով հայորդիները
+        <h4 class="chi-title">Հայ Առաքելական Սուրբ եկեղեցին իրականացնում է գործառույթ, որի միջոցով հայորդիները
             ավելի ճիշտ կերպով կսկսեն վերաբերվել Եկեղեցուն 28 Մարտ, 2013</h4>
+
 
         <p>Նորածին երեխաներին նախկինում անուն էին տալիս ոչ թե անմիջապես ծնվելու պահին, այլ՝ մկրտելու
             արարողության ժամանակ, մինչդեռ խորհրդային տարիներից մինչ այսօր երեխային ծննդատնից դուրս գրելու
             համար որպես կարևոր նախապայման է հանդիսանում ծննդյան վկայականը, որի մեջ նշված է նաև անունը:
         </p>
         <span class="pull-right chi-article-link"></span>
-        <hr/>
     </div>
 </div>
-
+<hr/>
 
 <div class="row">
     <header class="chi-header chi-header-left ">
@@ -191,11 +268,11 @@
 
 <div class="row">
     <div class="col-sm-3 no-gutter-left">
-        <img class="img-responsive" src="photo/img-7.png" alt=""/>
+        <img class="img-responsive" src="photo/img.7,0.png" alt=""/>
     </div>
 
     <div class="col-sm-9 no-gutter-right">
-        <h4 class="chi-article-title">Վաչե և Թամար Մանուկյան» մատենադարան</h4>
+        <h4 class="chi-title">Վաչե և Թամար Մանուկյան» մատենադարան</h4>
 
         <p>Դարեր շարունակ հայ հոգևորականներն ու մտավորականներն իրենց գիտելիքները հարստացրել են Մայր
             Աթոռի գրադարանում: Մայր Աթոռի տարածքում գրադարան եղել է Կիրակոս կաթողիկոս Վիրապեցու
@@ -211,11 +288,11 @@
 
 <div class="row">
     <div class="col-sm-3 no-gutter-left">
-        <img class="img-responsive chi-article-img" src="photo/img-8.png" alt=""/>
+        <img class="img-responsive chi-article-img" src="photo/img-8,0.png" alt=""/>
     </div>
 
     <div class="col-sm-9 no-gutter-right">
-        <h4 class="chi-article-title">Էօռնեկյան» հանրակրթական դպրոց</h4>
+        <h4 class="chi-title">Էօռնեկյան» հանրակրթական դպրոց</h4>
 
         <p>Իր գոյության վաղ ժամանակներից Հայ Առաքելական Եկեղեցին հատուկ նշանակություն է տվել կրթությանը՝
             կարևոր դեր խաղալով ոչ միայն ազգի բարոյական և հոգևոր արժեքների, այլև գիտության, արվեստի,
@@ -224,29 +301,21 @@
         </p>
         <span class="pull-right chi-article-link"></span>
 
-        <hr/>
-        <div class="row">
-            <div>
-                <img class="img-responsive chi-article-img" src="photo/img-17.png" alt=""/>
-
-                <p>............ </p>
-            </div>
-
-
-        </div>
-        <div></div>
-
-
-        <!--End Left Panel-->
-
-
-        <!--Right Panel-->
-
     </div>
 
 </div>
+<hr/>
 
 <div class="row">
+    <div>
+        <img class="img-responsive chi-article-img" src="photo/img-17.png" alt=""/>
+
+        <h4 class="chi-video-title"> Փետրվարի 27-ին` Սրբոց Վարդանանց տոնին, Ս. Էջմիածնի Մայր Տաճարում մատուցվեց Սուրբ
+            Պատարագ</h4>
+
+    </div>
+
+
     <header class="chi-header chi-header-left">
         <h3 class="chi-header-title">Մամուլի տեսություն</h3><span class="chi-header-logo"></span>
     </header>
@@ -258,82 +327,227 @@
         <h4 class="chi-article-title">Կիպրոսի հյուսիսում հայկական եկեղեցի է վերաբացվել </h4>
 
         <div class="chi-article-info">
-            <time>20 մարտի 2014</time>
+            <time class="chi-article-time">20 մարտի 2014</time>
             <span class="pull-right chi-article-link"></span>
         </div>
 
     </div>
     <div class="col-sm-6 no-gutter-right">
-        <img class="img-responsive chi-article-img" src="photo/img-11.png" alt=""/>
+        <img class="img-responsive chi-article-img" src="photo/img-27.png" alt=""/>
         <h4 class="chi-article-title">Տեր Վահրամ քահանա. Ուլֆ Էկմանի վերադարձը Կաթոլիկ եկեղեցի դարձի անուղղակ հրավեր
             է</h4>
 
+
         <div class="chi-article-info">
-            <time>19 Մարտի, 2013</time>
+            <time class="chi-article-time">19 Մարտի, 2013</time>
             <span class="pull-right chi-article-link"></span>
         </div>
 
     </div>
 </div>
 
-<div class="row">
 
-    <header class="chi-header chi-header-left ">
-        <h3 class="chi-header-title">Հատուկ նախագծեր</h3><span class="chi-header-logo"></span>
-    </header>
-    <div class="row">
-        <div class="col-sm-4 no-gutter-left">
-            <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
-            <h4 class="chi-article-title">Հայ եկեղեցու քարտեզ</h4>
-
-            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
-            </P>
-            <span class="pull-right chi-article-link"> </span>
-        </div>
-        <div class="col-sm-4 no-gutter-left">
-            <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
-            <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
-
-            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
-            </P>
-
-            <div class="chi-article-info"></div>
-            <span class="pull-right chi-article-link"></span>
-        </div>
-        <div class="col-sm-4 no-gutter-left">
-            <img class="img-responsive chi-article-img" src="photo/img-12.png" alt=""/>
-            <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
-            <span class="pull-right chi-article-link"></span>
-
-            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
-            </P>
-
-        </div>
-    </div>
-
-</div>
 </div>
 <!--End Left Panel-->
 
 
 <!--Right Panel-->
-<div class="col-md-4">
+<div class="col-md-4 no-gutter-right chi-right-panel">
 
-    <header class="chi-header">
-        <h3 class="chi-header-title chi-widget">Օրացույց</h3>
+    <header class="chi-header chi-header-right">Օրացույց</header>
+
+    <header class="chi-calendar-header">
+
     </header>
 
-    <div></div>
+    <div class="chi-calendar">
+        <img src="photo/calendar.png" class="img-responsive" alt=""/>
+    </div>
 
-    <div class="chi-calendar-header"></div>
+
+    <div class="chi-article-info">
+        <p>ընթերցվածքը`Ա Կորնթ. 8:5-9:23</p>
+
+        <p>Ամեն տարի ապրիլի 7-ին Հայ Առաքելական Ս. Եկեղեցին նշում է
+            Ս. Մարիամ Աստվածածնի Ավետման տոնը:</p>
+    </div>
 
 
+    <h3 class=" chi-header-right">Լրահոս</h3>
+
+    <div class="chi-feed-wrapper">
+
+        <time class="chi-article-time">28 Մարտի, 2014</time>
+
+        <p> Ամենայն Հայոց Կաթողիկոսն ընդունեց Քուվեյթի համալսարանի ռեկտորին</p>
+        <hr/>
+        <time class="chi-article-time">27 Մարտի, 2014</time>
+
+        <p>Տեղի ունեցավ Տ. Շնորհք Ծ. Վրդ. Գասպարյանի հուղարկավորությունը</p>
+        <hr/>
+
+        <time class="chi-article-time">26 Մարտի, 2014</time>
+
+        <p>Ամենայն Հայոց Կաթողիկոսի ցավակցական գիրը Ասորի Ուղղափառ Եկեղեցու Պատրիարքի մահվան առիթով</p>
+        <hr/>
+        <time class="chi-article-time">25 Մարտի, 2014</time>
+
+        <p>Մայր Աթոռը դատապարտել է Քեսաբի ահաբեկչական գործողությունները</p>
+        <hr/>
+        <time class="chi-article-time"> 22 Մարտի, 2014</time>
+        <p>Ցավակցական գիր` Ասորի Ուղղափառ Եկեղեցու Պատրիարքի մահվան առիթով</p>
+        <hr/>
+        <time class="chi-article-time">11 Մարտի, 2014</time>
+        <p> Ամենայն Հայոց Կաթողիկոսն ընդունեց Սերբիայի արտաքին գործերի նախարարին</p>
+        <hr/>
+        <time class="chi-article-time">10 Մարտի, 2014</time>
+        <p>Ի Տեր հանգչեց Տ. Շնորհք ծայրագույն վարդապետ Գասպարյանը </p>
+        <hr/>
+        <time class="chi-article-time">9 Մարտի, 2014</time>
+        <p>Զատկական Ս. Պատարագ և խաչի օծում Արթիկի թեմում </p>
+        <hr/>
+        <time class="chi-article-time">27 Փետրվարի, 2014</time>
+        <p>Սրբոց Վարդանանց տոնին, Ս. Էջմիածնի Մայր Տաճարում մատուցվեց Սուրբ Պատարագ </p>
+        <hr/>
+    </div>
+
+    <div>
+
+        <span class="pull-right chi-article-link"></span>
+
+        <span class="chi-feed-more">կարդալ բոլորը</span>
+
+    </div>
+
+    <h3 class="chi-header-right">Հարցեր քահանային</h3>
+
+    <img class="img-responsive chi-article-img" src="photo/img-26.png" alt=""/>
+
+    <div>
+
+        <h3 class=" chi-heder chi-header-right">օրվա պատգամ</h3>
+
+
+        <img class="img-responsive chi-article-img" src="photo/img-28.png" alt=""/>
+    </div>
+    <div>
+
+        <h3 class="chi-heder chi-header-right"> Տեսանյութեր</h3>
+
+    </div>
+
+
+    <div class="col-sm-4 no-gutter-left">
+        <img class="img-responsive" src="photo/img-29.png" alt=""/>
+    </div>
+
+    <div class="col-sm-8 no-gutter-right">
+        <time class="chi-article-time">26/03/2014</time>
+
+        <p>Ամենայն Հայոց Կաթողիկոսի ցավակցական գիրը Ասորի Ուղղափառ Եկեղեցու Պատրիարքի մահվան առիթով</p>
+    </div>
+    <div class="col-sm-4 no-gutter-left">
+        <img class="img-responsive" src="photo/img-30.png" alt=""/>
+    </div>
+
+    <div class="col-sm-8 no-gutter-right">
+        <time class="chi-article-time"> 26/03/2014</time>
+        <p> Սբ. Հովհան Օձնեցու, Հովհան Որոտնեցու եւ Գրիգոր Տաթեւացու հիշատակության օր</p>
+        <hr/>
+    </div>
+    <div class="col-sm-4 no-gutter-left">
+        <img class="img-responsive" src="photo/img-33.png" alt=""/>
+    </div>
+
+    <div class="col-sm-8 no-gutter-right">
+        <time class="chi-article-time">26/03/2014</time>
+
+        <p>ԱՀԹ Առաջնորդարանում կայացել է Արման Նշանյանի «Մենության գիշեր» տեսահոլովակի պրեմիերան</p>
+
+        <p>դիտել բոլորը</p>
+        <span class="pull-right chi-article-link"> </span>
+
+    </div>
+    <img class="img-responsive" src="photo/img-12.png" alt=""/>
 </div>
 <!--End Right Panel-->
 
 
 </div>
 <!--End Basic Row-->
+
+
+<!--Special Row-->
+
+<div class="row">
+
+    <header class="chi-header chi-header-left ">
+        <h3 class="chi-header-title">Հատուկ նախագծեր</h3><span class="chi-header-logo"></span>
+
+    </header>
+
+</div>
+
+
+<div class="row chi-sp">
+
+    <div class="col-sm-4">
+        <img class="img-reponsive chi-article-img" src="photo/img-maps.png" alt=""/>
+        <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
+
+        <div class="chi-article-info">
+            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
+            </P>
+        </div>
+
+        <span class="pull-right chi-article-link"></span>
+    </div>
+    <div class="col-sm-4">
+        <img class="img-responsive chi-article-img" src="photo/img-maps.png" alt=""/>
+        <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
+
+        <div class="chi-article-info">
+            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:
+            </P>
+        </div>
+
+        <span class="pull-right chi-article-link"></span>
+    </div>
+    <div class="col-sm-4">
+        <img class="img-responsive chi-article-img" src="photo/img-maps.png" alt=""/>
+        <h4 class="chi-article-title">Հայ եկեղեցու հասցեացուցակ</h4>
+
+        <div class="chi-article-info">
+            <span class="pull-right chi-article-link"></span>
+            <P>Շրջեք ամբողջ աշխարհի հայ եկեղեցիները քարտեզի միջոցով:</P>
+        </div>
+    </div>
+
+</div>
+<br/>
+
+<div class=" row">
+    <footer>
+        <div class="ft">
+            <a href="#"> Լուրեր</a> | <a href="#">Նվիրապետական աթոռներ</a> | <a href="#"> Թեմական կյանք </a> |<a
+                href="#"> Հարցազրույցներ</a> |<a href="#"> Հոդվածներ</a> | <a href="#"> Միջեկեղեցական լուրեր</a> |
+            <a href="#"> Մամուլի տեսություն </a> | <a href="#"> Տեսանյութեր </a> |<a href="#">
+            Ձայնագրություններ </a> |<a href="#"> Օրվա լուսանկարը </a> |<a href="#"> Արխիվ </a> |<a href="#"> Հարցեր
+            քահանային </a> |<a href="#"> Օրացույց </a> |<a href="#"> օրվա պատգամ</a> |<a href="#"> Օգտակար
+            հղումներ</a>
+            |<a href="#"> Հատուկ նախագծեր</a> |<a href="#"> Հայ եկեղեցու քարտեզ</a> |<a href="#"> Հայ եկեղեցու
+            սպասավորներ</a> |
+            <a href="#"> Մրցույթներ</a>
+            |<a href="#"> Նախագծի մասին </a> |<a href="#"> Իրավունք</a> |<a href="#"> Կապ|</a>
+
+        </div>
+
+
+        <div class="chi-footer-copiright">Copyright. 2014 armchurch.info</div>
+    </footer>
+</div>
+
+<!--End Special Row-->
 
 
 </div>
@@ -345,7 +559,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-
 
 </body>
 </html>

@@ -27,7 +27,183 @@
     padding-right: 0;
 }
 /*End Common Classes*/
+@media (min-width: 1680px) {
+    body {
+        background-image: url(img/bg_left.png), url(img/bg_right.png);
+        background-repeat:  repeat-y, repeat-y;
+        background-position: left top, right top;
+    }
+}
 
+@media (min-width: 768px) {
+    .chi-nav-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+p {
+    font-family: 'ArialAMU';
+    font-size: 15px;
+}
+
+/*Carousel*/
+
+.carousel-right {
+    background: url(img/carousel-right.png) no-repeat;
+    width: 39px;
+    height: 71px;
+    display: block;
+}
+
+.carousel-left {
+    background: url(img/carousel-left.png) no-repeat;
+    width: 39px;
+    height: 71px;
+    display: block;
+}
+
+.chi-carousel-wrapper {
+    position: relative;
+    font-family: 'ArialAMU';
+    font-size: 13px;
+
+}
+
+.chi-carousel-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.chi-carousel-footer-item {
+    display: inline-block;
+    width: 185px;
+    height: 220px;
+    margin-right: 20px;
+    padding: 7px;
+    background-color: #ffffff;
+}
+
+/*End Carousel*/
+
+/*Header*/
+.chi-logo {
+    background: url(img/logo.png) no-repeat;
+    width: 437px;
+    height: 77px;
+    display: block;
+}
+
+.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #7c4ea9;
+}
+
+.chi-navbar {
+    margin: 15px -15px 15px -15px;
+    font-family: 'ArialAMU';
+}
+
+.chi-nav {
+    margin-top: 10px;
+    margin-left: 0;
+
+}
+
+ul.chi-nav > li + li:before {
+    /*
+    content: "|";
+    padding-right: 10px;
+    padding-left: 5px;
+    color: #FFFFFF;
+    */
+}
+
+ul.chi-nav > li {
+    background-color: #000000;
+    vertical-align: middle;
+}
+
+ul.chi-nav > li > a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'ArialAMU';
+    font-size: 15px;
+}
+
+ul.chi-nav > li > a:hover {
+    background-color: #000000;
+    color: #7c4ea9;
+}
+
+.chi-nav-search {
+    text-align: right;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.chi-nav-links {
+    text-align: right;
+    margin-left: 0;
+    margin-top: 10px;
+
+}
+
+ul.chi-nav-links > li > a {
+color: #000000;
+    font-size: 16px;
+}
+
+ul.chi-nav-links > li {
+    padding: 0;
+}
+
+ul.chi-nav-links > li + li:before {
+    content: "|";
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.chi-search {
+    background: url(img/search.png) no-repeat 99% center;
+    height: 30px;
+    width: 275px;
+    border: 1px solid #c0c0c0;
+    padding: 2px 5px;
+    font-family: 'ArialAMU';
+    font-size: 21px;
+}
+
+.chi-soc {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 2px;
+}
+
+.chi-soc-facebook {
+
+    background-image: url(img/soc-facebook.png);
+}
+.chi-soc-twitter {
+    background-image: url(img/soc-twitter.png);
+}
+.chi-soc-google {
+    background-image: url(img/soc-google.png);
+}
+ .chi-soc-youtube {
+    background-image: url(img/soc-youtube.png);
+}
+
+/*End Header*/
 
 .chi-header {
     margin: 30px 0;
@@ -45,8 +221,17 @@
     vertical-align: top;
 }
 
+.chi-title-carousel{
+    font-family: 'ArialAMU';
+    font-weight: Bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 50%;
+}
+
 .chi-header-title {
     font-family: 'FMBF Hanragitaran Italic';
+
     font-size: 29px;
     color: #ffffff;
     background-color: #7c4ea9;
@@ -58,6 +243,7 @@
 
 .chi-widget {
     display: block;
+
 }
 
 .chi-article-img {
@@ -66,19 +252,41 @@
 }
 
 .chi-article-title {
+
     font-family: 'ArialAMU';
     font-weight: bold;
     font-size: 17px;
     text-transform: uppercase;
     min-height: 72px;
+    color: #000000;
+
 }
+
+
+.chi-title {
+    font-family: 'ArialAMU';
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+.chi-video-title{
+    font-family:'ArialAMU';
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
 
 .chi-article-info {
     border: 0 solid;
     border-top-width: 1px;
     border-bottom-width: 4px;
     padding: 8px 0;
-    font-family: ArianAMU;
+    font-family: 'ArialAMU';
     font-size: 18px;
 }
 
@@ -87,6 +295,18 @@
     background-repeat: no-repeat;
     width: 22px;
     height: 16px;
+}
+.chi-article-time{
+    font-family: 'ArialAMU';
+    font-size:18px;
+
+
+/*    font-size: 20px;
+.chi-time{
+    font-size: 17px;
+    font-family: 'Myriad Pro';
+}
+*/
 }
 
 .chi-article-button {
@@ -97,26 +317,96 @@
 
 /*Right Panel*/
 
+
+.chi-right-panel {
+    padding-left: 30px;
+}
+
+
 .chi-calendar-header {
     background-image: url(photo/img-15.png);
     height: 83px;
     background-size: contain;
 }
 
-.left_control{
-    float: left;
-    display: inline-block;
-    border: 1px solid black;
-    width: 30px;
+.chi-calendar img {
+    width: 100%;
+    padding-bottom: 10px;
 }
 
-.right_control{
-    float: right;
-    display: inline-block;
-    border: 1px solid black;
-    width: 30px;
-}
 
 .chi-slide-item > img {
     min-width: 100%;
 }
+
+
+.chi-header-right {
+
+    font-family: 'FMBF Hanragitaran Italic';
+    font-size: 28px;
+    padding: 5px 20px;
+    background-color: #7c4ea9;
+    color: #ffffff;
+    height: 45px;
+    margin: 30px 0 5px;
+}
+
+
+
+.chi-feed-wrapper{
+    overflow-y: auto;
+    height: 550px;
+    font-size: 14px;
+    font-family:' ArialAMU';
+}
+
+.chi-feed-more {
+    font-family: ArialAMU;
+    font-size: 18px;
+    color: #807f7e;
+}
+
+.ft a{
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.ft a:link{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'ArialAMU';
+
+}
+.ft a:hover {
+    color:#000000;
+    color: #7c4ea9;
+    font-family: 'ArialAMU';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*Special Panel*/
+
+.chi-sp {
+    margin-right: -30px;
+    margin-left: -30px;
+}
+/*End Special Panel*/
+
+
+
+
+
+/*Footer*/
+
+.chi-footer-copiright {
+    font-family: 'ArialAMU';
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    display: block;
+    margin: 10px 0 50px;
+}
+/*End Footer*/
